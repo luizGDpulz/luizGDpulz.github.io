@@ -1,3 +1,113 @@
-<h1>Luiz Gustavo Dias Pulz</h1>
-<p>Me contarata sou Informático</p>
-<img src="./odeioCLT.png" alt="odeioCLT">
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Luiz Gustavo Dias Pulz</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- FontAwesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Luiz Gustavo Dias Pulz</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Habilidades</a></li>
+                <li class="nav-item"><a class="nav-link" href="#portfolio">Projetos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="text-center text-white d-flex align-items-center justify-content-center" id="header">
+        <div class="container">
+            <h1 class="animated fadeIn">Bem-vindo ao Meu Portfólio!</h1>
+            <p class="lead animated fadeIn delay-1s">Desenvolvedor de Sistemas & Apaixonado por Tecnologia</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Sobre Mim</h2>
+                    <p>Olá! Sou Luiz Gustavo, colorista em transição para a área de tecnologia. Atualmente, estou estudando Técnico em Desenvolvimento de Sistemas e focado em desenvolver projetos práticos para aprimorar minhas habilidades. Minha jornada tem sido marcada por proatividade e um aprendizado contínuo.</p>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="./odeioCLT.png" class="img-fluid rounded-circle" alt="odeioCLT">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="bg-light py-5">
+        <div class="container text-center">
+            <h2>Habilidades</h2>
+            <div class="row mt-4">
+                <div class="col-md-3 col-sm-6">
+                    <i class="fas fa-code fa-3x mb-3"></i>
+                    <h4>Desenvolvimento Web</h4>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <i class="fas fa-database fa-3x mb-3"></i>
+                    <h4>Banco de Dados</h4>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <i class="fas fa-users fa-3x mb-3"></i>
+                    <h4>Trabalho em Equipe</h4>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <i class="fas fa-paint-brush fa-3x mb-3"></i>
+                    <h4>Colorimetria</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-5">
+        <div class="container text-center">
+            <h2>Projetos Recentes</h2>
+            <p class="lead">Confira alguns dos meus projetos desenvolvidos:</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Gerenciamento Escolar</h5>
+                            <p class="card-text">Sistema completo com cadastro de alunos, turmas e relatórios.</p>
+                            <a href="https://github.com/seuprojeto" class="btn btn-dark">Ver Projeto</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Adicione mais projetos aqui -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-dark text-white py-5">
+        <div class="container text-center">
+            <h2>Contato</h2>
+            <p>Entre em contato comigo:</p>
+            <p>Email: <a href="mailto:email@exemplo.com" class="text-white">email@exemplo.com</a></p>
+            <p>Telefone: (XX) XXXXX-XXXX</p>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
