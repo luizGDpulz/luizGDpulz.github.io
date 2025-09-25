@@ -1,113 +1,198 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio | Luiz Gustavo Dias Pulz</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
-    <!-- FontAwesome for Icons -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luiz Gustavo Dias Pulz | Portfólio</title>
+  <meta name="description" content="Portfólio profissional de Luiz Gustavo Dias Pulz, desenvolvedor especializado em Tailwind, JS, PHP e UX.">
+  <meta property="og:title" content="Luiz Gustavo Dias Pulz | Portfólio" />
+  <meta property="og:description" content="Portfólio profissional de Luiz Gustavo Dias Pulz, desenvolvedor especializado em Tailwind, JS, PHP e UX." />
+  <meta property="og:image" content="assets/avatar.svg" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.3/dist/tailwind.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animista@1.0.0/animista.min.css">
+  <link rel="icon" href="assets/avatar.svg">
+  <link rel="me" href="https://github.com/luizGDpulz">
+  <!-- SEO e acessibilidade prontos -->
+  <script defer src="scripts/github.js"></script>
+  <script defer src="scripts/anim.js"></script>
+  <style>
+    /* Customizações rápidas para dark mode toggle, navbar sticky, etc. */
+    .navbar-solid { background: #0f172a; transition: background 0.22s; }
+    .navbar-transparent { background: transparent; }
+    .fade-up { animation: fade-up 0.52s ease-out; }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+    }
+  </style>
 </head>
-<body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Luiz Gustavo Dias Pulz</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
-                <li class="nav-item"><a class="nav-link" href="#skills">Habilidades</a></li>
-                <li class="nav-item"><a class="nav-link" href="#portfolio">Projetos</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contato</a></li>
-            </ul>
-        </div>
-    </nav>
+<body class="bg-slate-50 text-slate-900 dark:bg-[#0b1220] dark:text-slate-100 font-inter">
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed w-full z-30 navbar-transparent backdrop-blur-lg">
+    <div class="container mx-auto flex items-center justify-between py-4 px-6 max-w-6xl">
+      <a href="#hero" class="font-bold text-2xl tracking-tight text-cyan-500">LGD</a>
+      <ul class="flex gap-6 text-base">
+        <li><a href="#sobre" class="hover:text-cyan-500 transition">Sobre</a></li>
+        <li><a href="#skills" class="hover:text-cyan-500 transition">Skills</a></li>
+        <li><a href="#projetos" class="hover:text-cyan-500 transition">Projetos</a></li>
+        <li><a href="#contato" class="hover:text-cyan-500 transition">Contato</a></li>
+      </ul>
+      <button id="darkToggle" aria-label="Alternar modo escuro" class="ml-4 px-3 py-1 rounded-xl border border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white transition">🌙</button>
+    </div>
+  </nav>
 
-    <!-- Header -->
-    <header class="text-center text-white d-flex align-items-center justify-content-center" id="header">
-        <div class="container">
-            <h1 class="animated fadeIn">Bem-vindo ao Meu Portfólio!</h1>
-            <p class="lead animated fadeIn delay-1s">Desenvolvedor de Sistemas & Apaixonado por Tecnologia</p>
-        </div>
-    </header>
+  <!-- Hero Section -->
+  <section id="hero" class="pt-32 pb-16 flex flex-col md:flex-row items-center justify-between container mx-auto max-w-6xl">
+    <div class="md:w-2/3 fade-up">
+      <h1 class="text-5xl md:text-6xl font-bold mb-4 text-[#0f172a] dark:text-cyan-400">Luiz Gustavo Dias Pulz</h1>
+      <p class="text-xl md:text-2xl mb-6 text-slate-700 dark:text-slate-300">Desenvolvedor focado em UX, Tailwind, JS, PHP e soluções web modernas.</p>
+      <div class="flex gap-4">
+        <a href="#projetos" class="px-6 py-3 rounded-2xl bg-cyan-500 text-white font-bold shadow-lg hover:scale-105 transition">Ver projetos</a>
+        <a href="assets/cv-luizgd.pdf" download class="px-6 py-3 rounded-2xl border border-cyan-500 text-cyan-500 font-bold shadow-lg hover:bg-cyan-500 hover:text-white transition">Download CV</a>
+      </div>
+    </div>
+    <div class="md:w-1/3 flex justify-center items-center mt-8 md:mt-0">
+      <img src="assets/avatar.svg" alt="Avatar Luiz Gustavo Dias Pulz" class="w-40 h-40 rounded-full shadow-lg border-4 border-cyan-500" loading="lazy">
+    </div>
+  </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h2>Sobre Mim</h2>
-                    <p>Olá! Sou Luiz Gustavo, colorista em transição para a área de tecnologia. Atualmente, estou estudando Técnico em Desenvolvimento de Sistemas e focado em desenvolver projetos práticos para aprimorar minhas habilidades. Minha jornada tem sido marcada por proatividade e um aprendizado contínuo.</p>
-                </div>
-                <div class="col-md-6 text-center">
-                    <img src="./odeioCLT.png" class="img-fluid rounded-circle" alt="odeioCLT">
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Sobre Section -->
+  <section id="sobre" class="py-16 container mx-auto max-w-6xl fade-up">
+    <h2 class="text-3xl font-bold mb-6 text-cyan-500">Sobre mim</h2>
+    <div class="text-lg text-slate-700 dark:text-slate-300 space-y-4">
+      <p>Sou apaixonado por desenvolvimento web, com foco em criar experiências digitais acessíveis, rápidas e elegantes. Trabalho com Tailwind CSS, JavaScript, PHP e integração de plugins/CRM.</p>
+      <p>Tenho experiência em projetos que vão de landing pages a sistemas completos, sempre priorizando boas práticas de UI/UX, performance e acessibilidade.</p>
+      <p>Busco evoluir constantemente, aprendendo novas tecnologias e aplicando soluções criativas para desafios reais.</p>
+    </div>
+  </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="bg-light py-5">
-        <div class="container text-center">
-            <h2>Habilidades</h2>
-            <div class="row mt-4">
-                <div class="col-md-3 col-sm-6">
-                    <i class="fas fa-code fa-3x mb-3"></i>
-                    <h4>Desenvolvimento Web</h4>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <i class="fas fa-database fa-3x mb-3"></i>
-                    <h4>Banco de Dados</h4>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <i class="fas fa-users fa-3x mb-3"></i>
-                    <h4>Trabalho em Equipe</h4>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <i class="fas fa-paint-brush fa-3x mb-3"></i>
-                    <h4>Colorimetria</h4>
-                </div>
-            </div>
+  <!-- Skills Section -->
+  <section id="skills" class="py-16 container mx-auto max-w-6xl fade-up">
+    <h2 class="text-3xl font-bold mb-6 text-cyan-500">Skills</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h3 class="font-semibold mb-2">Front-end</h3>
+        <div class="space-y-2">
+          <div class="flex items-center justify-between"><span>Tailwind CSS</span><span class="skill-bar" data-level="95"></span></div>
+          <div class="flex items-center justify-between"><span>JavaScript</span><span class="skill-bar" data-level="90"></span></div>
+          <div class="flex items-center justify-between"><span>React</span><span class="skill-bar" data-level="80"></span></div>
         </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="py-5">
-        <div class="container text-center">
-            <h2>Projetos Recentes</h2>
-            <p class="lead">Confira alguns dos meus projetos desenvolvidos:</p>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Gerenciamento Escolar</h5>
-                            <p class="card-text">Sistema completo com cadastro de alunos, turmas e relatórios.</p>
-                            <a href="https://github.com/seuprojeto" class="btn btn-dark">Ver Projeto</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Adicione mais projetos aqui -->
-            </div>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-2">Back-end</h3>
+        <div class="space-y-2">
+          <div class="flex items-center justify-between"><span>PHP</span><span class="skill-bar" data-level="85"></span></div>
+          <div class="flex items-center justify-between"><span>Node.js</span><span class="skill-bar" data-level="70"></span></div>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="bg-dark text-white py-5">
-        <div class="container text-center">
-            <h2>Contato</h2>
-            <p>Entre em contato comigo:</p>
-            <p>Email: <a href="mailto:email@exemplo.com" class="text-white">email@exemplo.com</a></p>
-            <p>Telefone: (XX) XXXXX-XXXX</p>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-2">Ferramentas</h3>
+        <div class="space-y-2">
+          <div class="flex items-center justify-between"><span>Git</span><span class="skill-bar" data-level="90"></span></div>
+          <div class="flex items-center justify-between"><span>Figma</span><span class="skill-bar" data-level="80"></span></div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Bootstrap JS, Popper.js, and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Projetos Section -->
+  <section id="projetos" class="py-16 container mx-auto max-w-6xl fade-up">
+    <h2 class="text-3xl font-bold mb-6 text-cyan-500">Projetos</h2>
+    <div class="mb-4 flex gap-2">
+      <button class="filter-btn px-3 py-1 rounded-xl border border-slate-300 text-slate-700 hover:bg-cyan-500 hover:text-white transition" data-lang="all">Todos</button>
+      <button class="filter-btn px-3 py-1 rounded-xl border border-slate-300 text-slate-700 hover:bg-cyan-500 hover:text-white transition" data-lang="JavaScript">JS</button>
+      <button class="filter-btn px-3 py-1 rounded-xl border border-slate-300 text-slate-700 hover:bg-cyan-500 hover:text-white transition" data-lang="PHP">PHP</button>
+      <!-- Adicione mais filtros conforme necessário -->
+    </div>
+    <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+    <div class="mt-6 text-center">
+      <a href="https://github.com/luizGDpulz?tab=repositories" target="_blank" rel="noopener" class="text-cyan-500 underline">Ver todos no GitHub</a>
+    </div>
+  </section>
+
+  <!-- Contato Section -->
+  <section id="contato" class="py-16 container mx-auto max-w-6xl fade-up">
+    <h2 class="text-3xl font-bold mb-6 text-cyan-500">Contato</h2>
+    <form id="contactForm" class="max-w-lg mx-auto bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-lg" autocomplete="off" aria-label="Formulário de contato">
+      <div class="mb-4">
+        <label for="nome" class="block mb-2 font-semibold">Nome</label>
+        <input type="text" id="nome" name="nome" required class="w-full px-4 py-2 rounded-xl border border-slate-300 focus:border-cyan-500 focus:outline-none">
+      </div>
+      <div class="mb-4">
+        <label for="email" class="block mb-2 font-semibold">Email</label>
+        <input type="email" id="email" name="email" required class="w-full px-4 py-2 rounded-xl border border-slate-300 focus:border-cyan-500 focus:outline-none">
+      </div>
+      <div class="mb-4">
+        <label for="mensagem" class="block mb-2 font-semibold">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" required rows="4" class="w-full px-4 py-2 rounded-xl border border-slate-300 focus:border-cyan-500 focus:outline-none"></textarea>
+      </div>
+      <button type="submit" class="w-full px-6 py-3 rounded-2xl bg-cyan-500 text-white font-bold shadow-lg hover:scale-105 transition">Enviar</button>
+    </form>
+    <div class="mt-6 flex justify-center gap-6">
+      <a href="https://github.com/luizGDpulz" target="_blank" rel="noopener" aria-label="GitHub" class="text-2xl text-slate-700 dark:text-slate-300 hover:text-cyan-500 transition"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://linkedin.com/in/luizgdpulz" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-2xl text-slate-700 dark:text-slate-300 hover:text-cyan-500 transition"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </div>
+  </section>
+
+  <!-- Modal de confirmação de envio -->
+  <div id="modalConfirm" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+    <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-lg text-center">
+      <h3 class="text-xl font-bold mb-4 text-cyan-500">Mensagem enviada!</h3>
+      <p class="mb-4">Obrigado pelo contato. Retornarei em breve.</p>
+      <button id="closeModal" class="px-6 py-2 rounded-xl bg-cyan-500 text-white font-bold shadow-lg hover:scale-105 transition">Fechar</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="py-8 text-center text-slate-500">
+    &copy; 2025 Luiz Gustavo Dias Pulz. <a href="https://github.com/luizGDpulz" target="_blank" rel="noopener" class="underline">GitHub</a>
+  </footer>
+
+  <!-- Scripts para animações, dark mode, skills, modal, etc. -->
+  <script>
+    // Navbar solid on scroll
+    window.addEventListener('scroll', function() {
+      const nav = document.getElementById('navbar');
+      if(window.scrollY > 32) nav.classList.add('navbar-solid');
+      else nav.classList.remove('navbar-solid');
+    });
+
+    // Dark mode toggle
+    const darkToggle = document.getElementById('darkToggle');
+    darkToggle.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+    });
+
+    // Skills bar animation
+    document.querySelectorAll('.skill-bar').forEach(bar => {
+      const level = bar.getAttribute('data-level');
+      bar.innerHTML = `<div class='h-2 rounded-xl bg-cyan-500' style='width:0;transition:width 1s'></div>`;
+      setTimeout(() => {
+        bar.firstChild.style.width = level + '%';
+      }, 400);
+    });
+
+    // Contato modal
+    const contactForm = document.getElementById('contactForm');
+    const modalConfirm = document.getElementById('modalConfirm');
+    const closeModal = document.getElementById('closeModal');
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nome = contactForm.nome.value;
+      const email = contactForm.email.value;
+      const mensagem = contactForm.mensagem.value;
+      window.open(`mailto:luizgdpulz@gmail.com?subject=Contato%20Portfólio&body=Nome:%20${nome}%0AEmail:%20${email}%0AMensagem:%20${mensagem}`);
+      modalConfirm.classList.remove('hidden');
+    });
+    closeModal.addEventListener('click', () => {
+      modalConfirm.classList.add('hidden');
+    });
+    // Acessibilidade: fechar modal com ESC
+    window.addEventListener('keydown', (e) => {
+      if(e.key === 'Escape') modalConfirm.classList.add('hidden');
+    });
+  </script>
 </body>
 </html>

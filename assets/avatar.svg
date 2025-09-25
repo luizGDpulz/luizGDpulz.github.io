@@ -1,0 +1,5 @@
+<!-- Avatar SVG simples para Luiz -->
+<svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="80" cy="80" r="80" fill="#06b6d4"/>
+  <text x="50%" y="54%" text-anchor="middle" fill="#fff" font-size="56" font-family="Poppins, Inter, Arial" font-weight="bold" dy=".3em">LGD</text>
+</svg>
